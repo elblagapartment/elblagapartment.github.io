@@ -50,3 +50,12 @@ html, body {
     animation: animatedgradient 2s ease alternate infinite;
     background-size: 300% 300%;
 }
+.appDesc p{
+    width: 50%;
+    font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+    .appDesc p{
+        width: 100%;
+    }
+}
