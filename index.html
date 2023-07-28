@@ -32,9 +32,10 @@
 
 
 
-
-<h2 class="gradient-border-bottom" style="padding-bottom: 10px">Image Gallery</h2>
-
+<div class="gradient-border-bottom">
+    <h2>Image Gallery</h2>
+    <p style="padding-bottom: 10px">Click on an image to view it in full size</p>
+</div>
 <div class="img-buttons" style="padding-bottom:20px;">
     <button class="btn btn-primary" onclick="setLarge()">Large</button>
     <button class="btn btn-primary" onclick="setMedium()">Medium</button>
@@ -99,6 +100,11 @@
                 img.src ="./assets/images/" +  imgList[i];
                 // img width = width * screen size - margins
                 img.width = 0.01 * width * window.innerWidth - 30;
+                if (i === 0)
+                {
+                    // add first image class
+                    img.className = "first-img";
+                }
 
                 // add image onlick
                 img.onclick = function() {
