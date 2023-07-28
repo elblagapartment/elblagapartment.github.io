@@ -7,17 +7,25 @@
     <title>Elblag Apartment</title>
 
 </head>
-
+<!-- nice bootstrap styling -->
+<h1 class="gradient-border-bottom" style="padding-bottom: 10px">Elblag Apartment</h1>
 <body>
-Put Other
-Content
-Here
-and
-such
-
-
-
-
+<a href="https://www.booking.com/hotel/pl/gael-stary-rynek-elblag1.en-gb.html" class="btn btn-primary">Book Now</a>
+<br>
+<div style="width:50%; font-size: 20px">
+    <p>
+    Gael Stary Rynek is a spacious  1055ft<sup>2</sup> apartment located in the heart of Elblag, Poland. It's just 400 meters from Elbląg Canal, 9.4 km from Lake Drużno, and 1.9 km from Elbląg Railway Station. The apartment offers a large living space equipped with all necessary amenities, including a fully equipped kitchen with an oven, a microwave, a washing machine, a fridge, and a stovetop.
+    </p>
+    <p>
+    The apartment features three bedrooms, a flat-screen TV with satellite channels, and free WiFi. It also offers a balcony with a wonderful view of the Old Town, perfect for enjoying a meal outdoors while overlooking the city. The property is non-smoking and provides free private parking.
+    </p>
+    <p>
+    The Gael Stary Rynek is just 46 km from the Mewia Łacha Nature Reserve and 200 meters from St. Nicholas Cathedral. The nearest airport is Gdańsk Lech Wałęsa Airport, 74 km from Gael Stary Rynek.
+    </p>
+    <p>
+    This property has been welcoming Booking.com guests since 10 Jul 2023 and has received exceptional reviews for its location, cleanliness, and facilities.
+    </p>
+</div>
 </body>
 
 
@@ -35,13 +43,6 @@ such
 
 
 
-
-
-
-
-</div>
-
-<div class="img-viewport">
 
 
 
@@ -94,10 +95,15 @@ such
 
                 }
                 var img = document.createElement("img");
-                img.src ="./assets/images/" +  imgList[i] + ".JPG";
+                img.src ="./assets/images/" +  imgList[i];
                 // img width = width * screen size - margins
                 img.width = 0.01 * width * window.innerWidth - 30;
-                console.log(width);
+
+                // add image onlick
+                img.onclick = function() {
+                    var win = window.open();
+                    win.document.write('<img src="' + this.src + '" />');
+                };
                 shortest.appendChild(img);
 
             }
